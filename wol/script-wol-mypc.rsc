@@ -1,0 +1,1 @@
+/tool/wol interface=bridge-lan mac=xx:xx:xx:xx:xx:xx

@@ -1,0 +1,18 @@
+version: "2.1"
+services:
+    swag:
+        image: ghcr.io/linuxserver/swag
+        container_name: letsencrypt
+        cap_add:
+            - NET_ADMIN
+        environment:
+            - PUID=1000
+            - PGID=1000
+            - TZ=Asia/Shanghai
+            - URL=xxxxxx.com
+            - SUBDOMAINS=wildcard
+            - VALIDATION=dns
+            - DNSPLUGIN=cloudflare
+        volumes:
+            - ./config:/config
+        restart: always

@@ -1,0 +1,1 @@
+30 1 * * * /usr/local/bin/python /usr/src/app/pbr.py > /usr/src/app/log.txt

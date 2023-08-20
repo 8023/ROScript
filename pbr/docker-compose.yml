@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  server:
+    image: 8023/pbr4ros
+    build:
+      context: .
+      dockerfile: dockerfile
+    container_name: pbr4ros
+    restart: always
+    volumes:
+      - ./pbr.py:/usr/src/app/pbr.py
+      - ./wwwroot:/usr/src/app/wwwroot
+      - ./root.cron:/root/root.cron
+    ports:
+      - "8080:80"

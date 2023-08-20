@@ -1,0 +1,7 @@
+FROM python:3
+LABEL maintainer="8023 - i@8023.moe"
+WORKDIR /usr/src/app
+COPY ./start.sh ./start.sh
+RUN apt update -y && apt install cron -y && apt clean && \
+    pip install requests --no-cache-dir
+CMD ["./start.sh"]
